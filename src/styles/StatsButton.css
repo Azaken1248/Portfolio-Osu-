@@ -1,0 +1,53 @@
+.stats-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #ff9900, #ff5500);
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .graph {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    background-color: #000;
+  }
+  
+  .point {
+    width: 6px;
+    height: 6px;
+    background-color: #ffd700;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .point::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #ff5500;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .point:first-child::before {
+    display: none;
+  }
+  
+  .stats-button:hover {
+    background-image: linear-gradient(to right, #ff5500, #ff9900);
+  }
+  
