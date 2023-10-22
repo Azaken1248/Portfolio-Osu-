@@ -56,56 +56,12 @@
 .options-content h1 {
     color: #ff7b00;
     font-size: 5em;
+    font-weight: bold;
     margin-bottom: 10px;
     
 }
 
-.options-content button {
-    background-color: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 1em;
-    cursor: pointer;
-    width: 45vh;
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    overflow: hidden;
-    position: relative;
-    padding: 0;
-    transition: transform 0.3s;
-}
 
-.options-content button:hover {
-    transform: scale(1.1);
-    border: solid #ff7b00 2px;
-}
-
-.button-icon-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-left: 30px;
-    margin-right: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.button-icon {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.button-text {
-    padding-top: 0vh; 
-}
 
 @media screen and (max-width: 768px) {
     .options {
@@ -119,6 +75,15 @@
         height: 25vh;
         margin-top: 20px;
     }
+    .options-content button:hover{
+        border: solid #ff7b00 2px;
+    }
+    .options-content .MuiBox-root {
+        flex-direction: column !important;
+        text-align: center;
+        margin-top: 20px;
+    }
+
 
     .options-content h1 {
         font-size: 3em;
@@ -134,8 +99,8 @@
         width: 90%;
     }
 
-    .options-content button {
-        flex-direction: column;
+    .options-content .MuiBox-root {
+        flex-direction: column !important;
         text-align: center;
         margin-top: 20px;
     }
