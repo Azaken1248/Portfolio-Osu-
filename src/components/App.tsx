@@ -1,5 +1,9 @@
 import { useState } from "react";
+
 import LandingPage from "../components/LandingPage";
+import DataLoader from "./DataLoader";
+import StatsPage from "./StatsPage";
+
 import "../styles/App.css";
 
 function App() {
@@ -9,10 +13,14 @@ function App() {
   var cp = cpp;
   if (current_page == "stats-page") {
     console.log(current_page);
-    return <LandingPage setCurrentPage={setCurrentPage} />;
+    return (
+      <>
+        <StatsPage setCurrentPage={setCurrentPage} />
+      </>
+    );
   } else if (current_page == "plays-page") {
     console.log(current_page);
-    return <LandingPage setCurrentPage={setCurrentPage} />;
+    return <></>;
   } else {
     console.log(current_page);
     return <LandingPage setCurrentPage={setCurrentPage} />;
